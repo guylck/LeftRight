@@ -1,0 +1,48 @@
+<!--<ui-view>-->
+<ion-view>
+
+	<ion-content class="signin has-header center">
+		<!-- Header -->
+		<div class="row">
+			<h1 class="title center light">ברוך הבא לFOOD KEEPER	
+			</h1>
+		</div>
+		<form>
+
+			<!-- Form inputs -->
+			<div class="list">
+
+				<!-- Username -->
+				<label class="item item-input">
+					<span class="input-label">דוא"ל</span>
+					<input type="email" ng-model="loginUser.email">
+				</label>
+
+				<!-- Password -->
+				<label class="item item-input">
+					<span class="input-label">ססמה</span>
+					<input type="text" ng-model="loginUser.password">
+				</label>
+			</div>
+
+			<!-- Sign in button -->
+			<div class="row">
+				<div class="col-33">
+					<button class="button button-block" ng-click="signIn()">כניסה</button>
+				</div>
+			</div>
+			<div class="row center-text">
+				<!-- <a href="#/signUp" class="calm">עוד לא רשום? הרשם עכשיו!</a> -->
+				<button class="button button-clear button-stable button-block center-text" ng-click="goToSignup()">
+				  	עוד לא רשום? הרשם עכשיו!
+				</button>
+
+			</div>
+		</form>
+
+		<div ng-show="showFooter" class="bar bar-footer bar-assertive hide-on-keyboard-open">
+		  	<div class="title">{{ footerMessage }}</div>
+		</div>
+	</ion-content>
+<!--</ui-view>-->
+</ion-view>

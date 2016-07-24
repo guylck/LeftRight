@@ -1,0 +1,21 @@
+<ion-view view-title="הפוסטים שלי">
+    <ion-content>
+        
+        <div ng-if="myPosts.length==0">
+           <h1>{{ noPostsMessage }}</h1>
+        </div>
+        
+        <ion-list ng-repeat="post in myPosts">
+            <post-directive post="post"></post-directive>
+        </ion-list>
+        
+    </ion-content>
+    
+    <div class="fixed-outside padding-normal fab-container">
+        <div class="fab-div">
+            <button id="btnAddPost" class="button button-circle button-positive icon fab-shadow" ng-click="goToUploadPost()">
+    			+
+    		</button>
+        </div>
+    </div>
+</ion-view>

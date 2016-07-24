@@ -1,0 +1,58 @@
+<ion-view>
+	<!--<ion-header-bar class="bar bar-calm" align-title="center">
+		<h1 class="title">ספר לנו קצת על השאריות שלך</h1>
+	</ion-header-bar>-->
+
+	<ion-content class="center padding">
+		<form name="frmUploadPost" novalidate>
+			<ion-list class="list inset-list">
+				<div class="item">
+			    	<products-list-directive products-list="products" read-only="false"></products-list-directive>
+				</div>
+				<div class="item item-divider">
+					המזון הנתרם הוא:
+				</div>
+				<div class="item row">
+					<div class="col">
+						<ion-checkbox class="item-checkbox-right no-border" ng-model="post.isKosher">כשר</ion-checkbox>
+					</div>
+					<div class="col">					
+						<ion-checkbox class="item-checkbox-right no-border" ng-model="post.isNotKosher">לא כשר</ion-checkbox>
+					</div>
+				</div>
+				<div class="item row">
+					<div class="col">
+						<ion-checkbox class="item-checkbox-right no-border" ng-model="post.isMeat">בשרי</ion-checkbox>
+					</div>
+					<div class="col">
+						<ion-checkbox class="item-checkbox-right no-border" ng-model="post.isDairy">חלבי</ion-checkbox>
+					</div>
+					<!--<div class="col">
+						<ion-checkbox class="item-checkbox-right" ng-model="post.isParve">פרווה</ion-checkbox>
+					</div>-->
+				</div>
+				<div class="item row">
+					<div class="col">
+						<ion-checkbox class="item-checkbox-right no-border" ng-model="post.isHot">חם</ion-checkbox>
+					</div>
+					<div class="col">					
+						<ion-checkbox class="item-checkbox-right no-border" ng-model="post.isCold">קר</ion-checkbox>
+					</div>
+				</div>
+				<div class="item row">
+					<div class="col">
+						<ion-checkbox class="item-checkbox-right no-border" ng-model="post.isPacked">ארוז</ion-checkbox>
+					</div>
+					<div class="col">					
+							<ion-checkbox class="item-checkbox-right no-border" ng-model="post.isNotPacked">לא ארוז</ion-checkbox>
+					</div>
+				</div>			
+			  	 <label class="item item-input item-stacked-label">
+			    	<span class="input-label">תיאור כללי על התרומה</span>
+			    	<input type="text" ng-model="post.description" required ng-maxlength="100">
+			  	</label>
+				<button class="button button-block icon-left button-positive ion-chevron-left" ng-click="goToDeliveryDetails()">המשך לפרטי האיסוף</button>
+			</ion-list>
+		</form>
+	</ion-content>
+</ion-view>

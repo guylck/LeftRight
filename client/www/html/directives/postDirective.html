@@ -1,0 +1,57 @@
+<div class="list card">
+    
+    <!-- TODO: different card -->
+    <!-- Business details -->
+    <div class="item">
+        <h2>{{ post.business.name }}</h2>
+        <p>{{ post.business.adress }}</p>
+    </div>
+    
+    <!-- Picking times -->
+    <div class="item item-divider">
+        זמני איסוף
+    </div>
+    <div class="item row">
+      <div class="col">
+          {{ dateString }}
+      </div>
+      <div class="col">
+          {{ startTimeString }}
+      </div>
+      <div class="col">
+          -
+      </div>
+      <div class="col">
+          {{ endTimeString }}
+      </div>
+    </div>
+    
+    <!-- Contentt of the donation -->
+    <div class="item item-divider">
+        תוכן התרומה
+    </div>
+    <div class="item item-body">
+      <ul class="list">
+        <li class="item" ng-repeat="product in post.products">
+          {{ product.description + " " + product.amount + " " + product.units.display}}
+        </li>
+      </ul>
+      <p>אידיקציות</p>
+    </div>
+</div>
+  <!--<div class="item item-text-wrap">
+    <img src="{{avatarSrc}}">
+    <h2>{{postTitle}}</h2>
+    <p>{{postSubheader}}</p>
+  </div>
+
+  <div class="item item-text-wrap">
+    <img class="full-image" src="img/ionic.png">
+    <p>
+      {{post.description}}
+    </p>
+    <p>
+      <a href="#" class="subdued">1 Like</a>
+      <a href="#" class="subdued">5 Comments</a>
+    </p>
+  </div>-->

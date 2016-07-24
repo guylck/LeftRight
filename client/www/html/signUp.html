@@ -1,0 +1,65 @@
+<!--<ui-view>-->
+<ion-view view-title="נצטרך כמה פרטים..." >
+<!--
+	<ion-header-bar class="bar bar-positive" align-title="center">
+		<h1 class="title">נצטרך כמה פרטים...</h1>
+	</ion-header-bar>-->
+
+	<ion-content class="signin has-header center padding">
+
+		<!-- Form -->
+		<form name="frmSignUp" novalidate>
+
+			<!-- Form inputs -->
+			<div class="list">
+				
+				<!-- Name -->
+				<label class="item item-input">
+					<span class="input-label">שם פרטי</span>
+					<input type="text" name="firstName" ng-model="user.name" required ng-minlength="2">
+						<span ng-show="frmSignUp.firstName.$invalid" class="ion-close-circled"></span>
+					</input>
+				</label>
+
+				<!-- Last Name -->
+				<label class="item item-input">
+					<span class="input-label">שם משפחה</span>
+					<input type="text" name="lastName" ng-model="user.lastname" required ng-minlength="2">
+						<span ng-show="frmSignUp.lastName.$invalid" class="ion-close-circled"></span>
+					</input>
+				</label>
+
+				<!-- email -->
+				<label class="item item-input">
+					<span class="input-label">דוא"ל</span>
+					<input type="email" name="email" ng-model="user.email" required>
+						<span ng-show="frmSignUp.email.$invalid" class="ion-close-circled"></span>
+					</input>
+				</label>
+
+				<!-- Password -->
+				<label class="item item-input">
+					<span class="input-label">ססמה</span>
+					<input type="text" name="password" placeholder="6 תווים" ng-model="user.password" required ng-minlength="6">
+						<span ng-show="frmSignUp.password.$invalid" class="ion-close-circled"></span>
+					</input>
+				</label>
+                
+                <!-- Retype password -->
+                <label class="item item-input">
+                	<span class="input-label">עוד פעם ססמה</span>
+                <input type="text" name="retype_password" placeholder="6 תווים" ng-model="retypePassword" required ng-minlength="6">
+						<span ng-show="user.password != retypePassword || frmSignUp.password.retype_password" class="ion-close-circled"></span>
+					</input>
+				</label>	
+			</div>
+
+			<!-- Sign up button -->
+			<button class="button button-block button-light" ng-disabled="frmSignUp.$invalid" ng-click="signUp()">
+			  	הרשם
+			</button>
+		</form>
+		<span ng-show="wasError">{{ errMessage }}</span>
+	</ion-content>
+<!--</ui-view>-->
+</ion-view>

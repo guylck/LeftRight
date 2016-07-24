@@ -1,0 +1,36 @@
+<ion-view>
+
+    <ion-content class="center padding">
+        <form name="delveryFrm" novalidate>
+            <ion-list>
+                
+                <div class="item item-divider">זמן מסירה</div>
+                
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">תאריך</span>
+                    <input type="date" ng-model="post.deliveryDate" required/>
+                </label>
+                
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">בין שעה</span>
+                    <input type="time" ng-model="post.deliveryTimes.startTime" required/>
+                </label>
+                
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">לשעה</span>
+                    <input type="time" ng-model="post.deliveryTimes.endTime" required/>
+                </label>
+                
+                <div class="item item-divider">נתוני מיקום</div>
+                
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">כתובת לאיסוף</span>
+                    <input type="text" ng-model="post.deliveryAdress" required ng-maxlength="40"/>
+                </label>
+                
+                
+                <button class="button button-block button-balanced" ng-click="uploadPost()">פרסם!</button>
+            </ion-list>
+        </form>
+    </ion-content>
+</ion-view>

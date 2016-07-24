@@ -1,0 +1,16 @@
+<ion-view>
+
+	<ion-content class="has-subheader" padding=true scroll="true">
+
+        <div class="list list-inset">
+            <label class="item item-input">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input type="text" placeholder="חיפוש" ng-model="searchText">
+            </label>
+        </div>
+        
+		<ion-list ng-repeat="post in wall | filter:searchText">
+			<post-directive post="post"></post-directive>
+		</ion-list>
+	</ion-content>
+</ion-view>
